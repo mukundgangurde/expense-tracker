@@ -6,76 +6,111 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: aliceblue;
-  /* background-color: rgb(41, 41, 41);
-  color: white; */
-}
-
+/* Header */
 #header {
   width: 100%;
-  height: 100vh;
-  /* background-image: url(images/background.img); */
-  /* background-size: cover; */
-  /* background-position: center; */
-}
-
-#container {
-  height: 100%;
-}
-
-/* Navigation*/
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 30px 5%;
+  min-height: 100vh;
   background-color: white;
 }
 
-ul {
+#container {
+  width: 100%;
+}
+
+/* Navigation*/
+.navbar {
+  width: 100%;
+  padding: 30px 5%;
   display: flex;
-  justify-content: space-between;
-  font-size: 18px;
+  justify-content:space-between;
+  align-items: center;
+  background-color: rgb(146, 255, 131);
 }
 
-nav ul li {
-  display: inline-block;
+#logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.navlinks {
+  display: flex;
+  gap: 30px;
+}
+
+.navlinks li {
   list-style-type: none;
-  margin: 10px 20px;
 }
 
-nav ul li :hover {
+.navlinks li a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.navlinks li a:hover {
   color: green;
 }
 
-nav ul li a {
-  color: black;
-  text-decoration: none;
-}
+/* ---- Mobile Fix (Very Important) ---- */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
+  }
 
+  #logo {
+    font-size: 20px;
+  }
+
+  .navlinks {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .navlinks li a {
+    font-size: 16px;
+  }
+}
 /* /Navigation */
 
 .header-text {
-  margin: 10% 50px;
-  padding: 50px;
-  font-size: 30px;
+  max-width: 700px;
+  margin: 120px auto;
+  padding: 20px;
+  font-size: 1.8rem;
 }
 
 .header-text h1 {
   margin-top: 20px;
-  font-size: 60px;
+  font-size: 3.5rem;
+  line-height: 1.2;
 }
 
 .header-text h1 span {
   color: rgb(93, 235, 93);
 }
 
+/* ---- Mobile Fix (Very Important) ---- */
+@media (max-width: 768px) {
+  .header-text {
+    margin: 80px 20px;   /* reduce margin */
+    font-size: 1.4rem;   /* smaller base font */
+  }
+
+  .header-text h1 {
+    font-size: 2.2rem;   /* reduce title size */
+  }
+}
+/* /Header */
+
 /* About */
 #about {
   padding: 80px 100px;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
 }
 
 .row {
@@ -93,7 +128,7 @@ nav ul li a {
 .about-col-1 img {
   width: 100%;
   height: 100%;
-  border-radius:10px;
+  border-radius: 10px;
 }
 
 .about-col-2 {
@@ -149,24 +184,30 @@ nav ul li a {
 
 /* Projects */
 .projects {
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   padding: 20px;
 }
+
 .project {
   display: flex;
   padding: 50px;
   gap: 50px;
 }
+
 .project-1 {
   width: 33%;
-  height: 60vh;
+  min-height: 100vh;
+  height: auto;
   border: 1px solid black;
   border-radius: 20px;
   padding: 40px;
 }
+
 .project-1 h3 {
   text-align: center;
 }
+
 .project-1 img {
   height: 130px;
   width: 300px;
@@ -177,7 +218,8 @@ nav ul li a {
 /* /Projects */
 /* Contacts */
 .contacts {
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   display: flex;
 
 }
@@ -186,6 +228,7 @@ nav ul li a {
   width: 50vw;
   padding: 100px;
 }
+
 .social {
   height: 50px;
   width: 200px;
@@ -195,16 +238,19 @@ nav ul li a {
   display: flex;
   gap: 10px;
 }
+
 .social div {
   height: 40px;
   width: 40px;
   background-color: black;
   border-radius: 5px;
 }
+
 .contactform {
   width: 50vw;
   padding: 80px;
 }
+
 .contactform form {
   display: grid;
   grid-template-columns: 1fr;
@@ -214,10 +260,12 @@ nav ul li a {
   width: 350px;
   /* keeps everything aligned */
 }
+
 .form-group {
   display: flex;
   flex-direction: column;
 }
+
 .contactform input,
 .contactform textarea {
   height: 40px;
@@ -228,9 +276,11 @@ nav ul li a {
   /* this ensures perfect alignment */
   margin-top: 5px;
 }
+
 .contactform textarea {
   height: 150px;
 }
+
 .contactform button {
   width: 150px;
   height: 45px;
@@ -241,7 +291,9 @@ nav ul li a {
   font-size: 1rem;
   cursor: pointer;
 }
+
 .contactform button:hover {
   background: darkgreen;
 }
+
 /* /Contacts */
