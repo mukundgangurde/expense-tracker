@@ -1,0 +1,46 @@
+.navbar {
+  width: 75%;
+  margin: 20px auto; /* center + top/bottom gap */
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+
+  border-radius: 16px;
+
+  /* Glass effect */
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+
+  position: sticky;
+  top: 10px; /* makes it float from top */
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: #e2e8f0;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #38bdf8;
+}

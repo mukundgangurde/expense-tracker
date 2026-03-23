@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: #020617; /* deep dark base */
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Neon glow 1 */
+body::before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, #38bdf8, transparent 70%);
+  filter: blur(120px);
+  top: 10%;
+  left: 15%;
+  z-index: -1;
+}
+
+/* Neon glow 2 */
+body::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, #22c55e, transparent 70%);
+  filter: blur(120px);
+  bottom: 20%;
+  left: 40%;
+  z-index: -1;
+}

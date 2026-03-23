@@ -1,0 +1,70 @@
+.hero {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+}
+
+/* 3D Card */
+.hero-card {
+  max-width: 700px;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+
+  transition: transform 0.2s ease;
+  transform-style: preserve-3d;
+
+  /* Glass */
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  /* Glow */
+  box-shadow: 0 0 40px rgba(56, 189, 248, 0.2);
+}
+
+/* Text */
+.hero h1 {
+  font-size: 48px;
+}
+
+.hero h1 span {
+  color: #38bdf8;
+}
+
+.hero h2 {
+  color: #cbd5f5;
+  margin: 10px 0;
+}
+
+.hero p {
+  color: #94a3b8;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+/* Buttons style */
+.primary {
+  background: #38bdf8;
+  color: black;
+}
+
+.secondary {
+  border: 1px solid #38bdf8;
+  color: #38bdf8;
+}
